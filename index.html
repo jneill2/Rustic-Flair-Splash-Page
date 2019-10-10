@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Splash Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" charset="utf-8">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- <link href="https://rusticflair.s3.us-east-2.amazonaws.com/style.css" rel="stylesheet"> -->
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 20px;
+            }
+            [onclick] {
+                cursor: pointer;
+            }
+            h2 {
+                margin-bottom: 5px;
+            }
+            h3 {
+                margin: 5px;
+                /* font-size: 1em; */
+            }
+            .sidebar a {
+                margin-bottom: 15px;
+                display: none;
+            }
+            .tile {
+                text-align: center;
+                cursor: pointer;
+                display: inline-block;
+                background-color: rgba(0,0,0,0.13);
+                padding:20px;
+                margin: 3px;
+                border-radius: 10px;
+                /* font-size: 2em; */
+                width: calc(33% - 50px);
+            }
+            .sidebar-tile {
+                /* width: calc(50% - 66px); */
+                text-align: center;
+                width: calc(100% - 45px);
+                background-color: rgba(0,0,0,0.13);
+                display: inline-grid;
+                border-radius: 10px;
+                padding:20px;
+                margin: 3px;
+                margin-top: 20px;
+            }
+            iframe {
+                display: block;
+                width: -webkit-fill-available;
+                height: 375px;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .video {
+                text-align: center;
+                margin-top: 20px;
+            }
+            @media only screen and (min-width: 1000px) {
+                .main {
+                    width: calc(100% - 400px)
+                }
+                .sidebar {
+                    position: absolute;
+                    top:75px;
+                    right: 10px;
+                    width: 300px;
+                    border-left: 1px solid gray;
+                    padding: 30px;
+                    padding-top: 0px;
+                }
+                .sidebar a {
+                    display: block;
+                }
+                .sidebar-tile {
+                    font-size: inherit;
+                    text-align: left;
+                    width: 100%;
+                    background-color: transparent;
+                    margin: 0px;
+                    margin-top: 20px;
+                    padding: 0px;
+                    height: 60px;
+                }
+                .sidebar-tile div {
+                    font-weight: bold;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to Rustic Flair Hotspot</h1>
+        <div class="main">
+            <div class="tile" onclick="openURL('https://www.youtube.com')" >
+                <div class="material-icons">ondemand_video</div>
+                <div>Youtube</div>
+            </div>
+            <div class="tile" onclick="openURL('https://google.com')">
+                <div class="material-icons">search</div>
+                <div>Google</div>
+            </div>
+            <div class="tile" onclick="openURL('https://www.google.com/maps/@40.3453758,-75.9204164,15z')">
+                <div class="material-icons">map</div>
+                <div>Maps</div>
+            </div>
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/K4xQaDDKY7k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            <div class="video">
+                <h3>It's "Just War" – Should Christians Fight? Debate</h3>
+            </div>
+                <iframe src="https://www.youtube.com/embed/K4xQaDDKY7k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="sidebar">
+            <div onclick="openURL('https://www.youtube.com/channel/UCDMOEj6lneZWgrp-r8KqXIQ')" class="sidebar-tile">
+                <div class="material-icons">ondemand_video</div>
+                <div>Apologetics – RZIM</div>
+            </div>
+
+            <div onclick="openURL('https://www.youtube.com/channel/UCL6qGDn7Nnd84-UgURpw8Dw')" class="sidebar-tile">
+                <div class="material-icons">volume_up</div>
+                <div>Scroll Publishing – David Bercot</div>
+            </div>
+                <a href="#" onclick="openURL('https://www.youtube.com/watch?v=4JFrEoXmRyo&t=6s')">The Kingdom of God</a>
+                <a href="#" onclick="openURL('https://www.youtube.com/watch?v=lZo6U-ijfgc')">What the Early Christians Believed About War</a>
+                <a href="#" onclick="openURL('https://www.youtube.com/watch?v=rThN8a2SK8Y')">What the Early Christians Believed About Divorce and Remarriage</a>
+
+            <div onclick="openURL('http://dwightgingrich.com/was-jesus-okay-with-homosexuality-1-of-5/')" class="sidebar-tile">
+                <div class="material-icons">menu_book</div>
+                <div>Was Jesus Okay With Homosexuality?</div>
+            </div>
+                <a href="#" onclick="openURL('http://dwightgingrich.com/was-jesus-okay-with-homosexuality-1-of-5/')">Introduction, Explanations, and a Summary of this Series</a>
+                <a href="#" onclick="openURL('http://dwightgingrich.com/was-jesus-okay-with-homosexuality-2-of-5/')">How Should We Interpret Jesus' Silence About Homosexuality?</a>
+                <a href="#" onclick="openURL('http://dwightgingrich.com/was-jesus-okay-with-homosexuality-3-of-5/')">Does "Love Your Neighbor" Mean Jesus Affirmed "Gay Love"?</a>
+                <a href="#" onclick="openURL('http://dwightgingrich.com/was-jesus-okay-with-homosexuality-4-of-5/')">Why It's Wrong to Say Jesus Said Nothing About Homosexuality</a>
+                <a href="#" onclick="openURL('http://dwightgingrich.com/was-jesus-okay-with-homosexuality-5-of-6/')">Historical Conclusions: Was Jesus Okay With Homosexuality?</a>
+        </div>
+    </body>
+    <script>
+        function openURL(url) {
+            window.open(url,'_blank');
+        }
+    </script>
+</html>
